@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Do it 03 08</title>
+    </head>
+    <body>
+        <div id ="app">
+            <child-component v-bind:propsdata="message"></child-component> <!--4-->
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+        <script>
+            Vue.component('child-component', { //2
+                props:['propsdata'],//3
+                template: '<p>{{propsdata}}</p>', //5
+            });
+            new Vue({ //1
+                el:"#app",
+                data: {
+                    message: '부모 컴포넌트로부터 전달되는 메세지'
+                }               
+            });
+        </script>
+    </body>
+</html>
