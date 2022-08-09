@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do it 05 04</title>
+</head>
+<body>
+    <div id="app">
+        <a v-if="flag">두잇 Vue.js</a> <!--조건 없으므로 flag는 true. 화면에 '두잇 Vue.js' 표시됨-->
+        <ul>
+            <li v-for="system in systems">{{ system }}</li> <!--systems의 배열 요소 수만큼 태그 반복되어 각 요소의 값이 화면에 표시됨-->
+        </ul>
+        <p v-show="flag">두잇 Vue.js</p> <!--조건 없으므로 flag는 true. 화면에 '두잇 Vue.js' 표시됨-->
+        <h5 v-bind:id="uid">뷰 입문서</h5> <!--HTML태그의 id속성과 뷰 데이터에 선언한 uid와 연동하여 화면에 표시-->
+        <button v-on:click="popupAlert">경고 창 버튼</button> <!--버튼을 클릭시 해당 이벤트 감지하여 methods속성에 선언한 popupAlert() 메서드 수행-->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                flag: true,
+                systems: ['android', 'ios', 'window'],
+                uid: 10
+            },
+            methods:{
+                popupAlert: function() {
+                    return alert('경고 창 표시');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
