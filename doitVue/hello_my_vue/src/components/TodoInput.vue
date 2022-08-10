@@ -17,10 +17,13 @@
 </template>
 
 <script>
+import Modal from './common/Modal.vue'
 export default {
+    props:['propsdata'],
     data() {
         return {
-            newTodoItem: ''
+            newTodoItem: '',
+            showModal: false
         }
     },
     methods: {
@@ -29,11 +32,16 @@ export default {
                 var value = this.newTodoItem && this.newTodoItem.trim(); //인풋 박스에 입력된 텍스트의 앞뒤 공백 문자열 제거
                 this.$emit('addTodo',value); //부모 컴포넌트로 변경값 보내기
                 this.clearInput;
+            } else {
+                this.showModal = !this.showModal; //텍스트 미입력 시 모달 동작
             }
         },
         clearInput() {
             this.newTodoItem = '';
         }
+    },
+    components: {
+        Modal: Modal
     }
 }
 </script>
