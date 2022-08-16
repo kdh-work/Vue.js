@@ -13,7 +13,7 @@ import TodoInput from './components/TodoInput.vue'
 import TodoList from './components/TodoList.vue'
 import TodoFooter from './components/TodoFooter.vue'
 export default {
-  props:['propsdata'],
+  //임시주석 props:['propsdata'],
   data() {
     return {
       todoItems: []
@@ -22,7 +22,7 @@ export default {
   created() {
     if(localStorage.length>0) {
       for(var i=0; i<localStorage.length; i++) {
-        this.todoItems.push(localStorage.key(1));
+        this.todoItems.push(localStorage.key(i));
       }
     }
   },

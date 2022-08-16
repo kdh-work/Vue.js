@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체 모델(DOM)</title>
+    <script type="text/javascript">
+        window.onload=function() {
+            //1. 문서 객체 생성
+            var header=document.createElement('h2'); //h2 태그를 생성해주는 것
+            var textNode=document.createTextNode('Hello DOM');
+
+            //2. 노드(요소/텍스트)를 연결.
+            header.appendChild(textNode);
+
+            //3. body 문서 객체에 header 문서 객체를 추가
+            document.body.appendChild(header);
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header_1" name="">HEADER-1</h1>
+        <div>
+            <h1 id = "header_2">HEADER-2</h1>
+        </div>
+        <hr>
+        <h1 id ="clock"></h1>
+</body>
+</html>

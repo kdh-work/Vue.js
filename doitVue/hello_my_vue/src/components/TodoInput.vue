@@ -19,7 +19,7 @@
 <script>
 import Modal from './common/Modal.vue'
 export default {
-    props:['propsdata'],
+    //임시주석 props:['propsdata'],
     data() {
         return {
             newTodoItem: '',
@@ -30,8 +30,8 @@ export default {
         addTodo() {
             if(this.newTodoItem !== "") { //인풋 박스의 입력값이 있을 때만 저장
                 var value = this.newTodoItem && this.newTodoItem.trim(); //인풋 박스에 입력된 텍스트의 앞뒤 공백 문자열 제거
-                this.$emit('addTodo',value); //부모 컴포넌트로 변경값 보내기
-                this.clearInput;
+                this.$emit('addTodo',value) //부모 컴포넌트로 변경값 보내기
+                this.clearInput();
             } else {
                 this.showModal = !this.showModal; //텍스트 미입력 시 모달 동작
             }
