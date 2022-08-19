@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 가입 신청서 예제</title>
+</head>
+<body>
+  <h2>회원 가입을 환영합니다.</h2>
+  <fieldset>
+    <legend>사용자 정보</legend>
+    <ul>
+      <!-- <li>아이디 <input type="text"></li>
+      <li>이메일 <input type="email"></li>
+      <li>비밀번호 <input type="password"></li>
+      <li>비밀번호 확인 <input type="password"></li> -->
+      <li><label for="user-id">아이디 <input type="text" id="user-id"></label></li>
+      <li><label for="user-email">이메일 <input type="email" id="user-email"></label></li>
+      <li><label for="user-password">비밀번호 <input type="password" id="user-password"></label></li>
+      <li><label for="user-repassword">비밀번호 확인 <input type="password" id="user-repassword"></label></li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>이벤트와 새로운 소식</legend>
+    <label><input type="radio" name="mail" value="yes">메일 수신</label>
+    <label><input type="radio" name="mail" value="no">메일 수신 안함</label>
+  </fieldset>
+  <input type="submit" value="가입하기">
+  <input type="submit" value="취소">
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배송 주문 양식 예제</title>
+</head>
+<body>
+  <h1>배송 주문 양식 예제</h1>
+  <form action="">
+    <fieldset>
+      <legend>배송 정보</legend>
+      <ul id="shipping">
+        <li>
+          <label for="prod">주문 상품</label>
+          <input type="text" id="prod" value="상품용 1KG" readonly> <!--readonly: 읽기만 가능-->
+        </li>
+        <li>
+          <label for="user-name">이름</label>
+          <input type="text" id="user-name" required autofocus> <!--required autofocus: 처음 실행시 원하는 폼에 포커싱 지정-->
+        </li>
+        <li>
+          <label for="addr">배송 주소</label>
+          <input type="text" id="addr" required> <!--required: 서버로 제출되기 전에 반드시 채워져야 하는 입력 필드 명시-->
+        </li>
+        <li>
+          <label for="mail">이메일</label>
+          <input type="email" id="mail">
+        </li>
+        <li>
+          <label for="phone">연락처</label>
+          <input type="tel" id="phone" required>
+        </li>
+        <li>
+          <label for="d-day">배송 지정</label>
+          <input type="date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+        </li>
+        <li>
+          <label for="memo">메모</label>
+          <textarea id="memo" cols="40" rows="4"></textarea>
+        </li>
+      </ul>
+    </fieldset>
+    <div>
+      <input type="submit" value="주문하기">
+      <input type="reset" value="취소하기">
+    </div>
+  </form>
+  
+</body>
+</html>
