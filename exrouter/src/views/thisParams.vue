@@ -26,7 +26,7 @@
       }
     },
     created() {
-      console.log(this.$route.params.name);
+      console.log(this.$route.params.name);//$route.params 로 접근
       console.log(this.$route.params.age);
     }
   }

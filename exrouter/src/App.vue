@@ -29,8 +29,7 @@
       <br />
 
       <div>
-        <router-link
-          :to="{
+        <router-link  :to="{
             name: 'thisParams',
             params: { name: 'Params 선언적 방식', age: 1 },
           }"
@@ -62,3 +61,4 @@ export default {
   },
 };
 </script>
+<!-- 참고: https://any-ting.tistory.com/46 -->
