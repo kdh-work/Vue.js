@@ -1,0 +1,25 @@
+{
+  "name": "work_vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdh-work/work_vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdh-work/work_vue/issues"
+  },
+  "homepage": "https://github.com/kdh-work/work_vue#readme",
+  "dependencies": {
+    "vue-router": "^3.6.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "^5.0.8"
+  }
+}
