@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 //Main라우트는 사용자가 해당 path에 접근하지 않아도 vue파일을 import하는 것
 import Main from '../views/MainPage.vue'
-//import Login from  '../views/LoginPage.vue'
+//import Login frocd m  '../views/LoginPage.vue'
 
 Vue.use(VueRouter)
 
